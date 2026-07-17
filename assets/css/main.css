@@ -233,6 +233,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 /* Landscape variant — for wide photos placed beside intro copy */
 .intro__image--landscape img { aspect-ratio: 3 / 2; }
+/* Product-shot variant — show full white-background image, no crop */
+.intro__image--product img { aspect-ratio: 4 / 3; object-fit: contain; background: var(--color-white); }
 
 /* ---------- 8. SIGNS GRID ---------- */
 .signs { position: relative; padding: 40px 0; background: var(--color-cream); overflow: hidden; }
@@ -1204,6 +1206,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (min-width: 1024px) {
   .checklist { grid-template-columns: repeat(3, 1fr); }
 }
+/* Breathing room between a checklist and the text that follows it */
+.checklist + .intro__content { margin-top: 32px; }
 
 /* ==========================================================================
    22. PROMO BANNER — inline promotional link callout (e.g., financing)
