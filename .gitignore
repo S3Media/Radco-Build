@@ -1,0 +1,30 @@
+# Packaged delivery artifact
+radco-site.zip
+*.zip
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*~
+*.swp
+
+# Node (if any tooling is added later)
+node_modules/
+npm-debug.log*
+
+# Logs / temp
+*.log
+*.tmp
