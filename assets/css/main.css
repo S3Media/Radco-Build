@@ -235,6 +235,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .intro__image--landscape img { aspect-ratio: 3 / 2; }
 /* Product-shot variant — show full white-background image, no crop */
 .intro__image--product img { aspect-ratio: 4 / 3; object-fit: contain; background: var(--color-white); }
+/* Logo variant — framed partner logo, padded on white, no crop */
+.intro__image--logo img { aspect-ratio: 16 / 10; object-fit: contain; background: var(--color-white); padding: 34px; }
 
 /* ---------- 8. SIGNS GRID ---------- */
 .signs { position: relative; padding: 40px 0; background: var(--color-cream); overflow: hidden; }
@@ -1208,6 +1210,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 /* Breathing room between a checklist and the text that follows it */
 .checklist + .intro__content { margin-top: 32px; }
+/* Links inside checklist items match the site's accent-green + underline style */
+.checklist__item a {
+  color: var(--color-accent-dark);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-accent);
+  transition: color var(--transition-base);
+}
+.checklist__item a:hover { color: var(--color-primary); }
 
 /* ==========================================================================
    22. PROMO BANNER — inline promotional link callout (e.g., financing)
