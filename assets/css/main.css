@@ -1218,6 +1218,32 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: color var(--transition-base);
 }
 .checklist__item a:hover { color: var(--color-primary); }
+/* Feature variant — bold two-column green callout boxes with larger icons */
+.checklist--feature { grid-template-columns: 1fr; }
+.checklist--feature .checklist__item {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+  border-left-color: var(--color-accent-dark);
+  color: var(--color-white);
+  grid-template-columns: 60px 1fr;
+  align-items: start;
+  gap: 18px;
+  padding: 24px 26px;
+}
+.checklist--feature .checklist__item strong { color: var(--color-white); }
+.checklist--feature .checklist__item a { color: var(--color-white); border-bottom-color: rgba(255, 255, 255, 0.7); }
+.checklist--feature .checklist__item i {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--color-white);
+  font-size: 26px;
+}
+@media (min-width: 768px) {
+  .checklist--feature { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .checklist--feature { grid-template-columns: repeat(2, 1fr); }
+}
 
 /* ==========================================================================
    22. PROMO BANNER — inline promotional link callout (e.g., financing)
