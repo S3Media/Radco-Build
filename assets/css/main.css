@@ -1095,6 +1095,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 700;
   border-bottom: 1px solid var(--color-accent);
 }
+/* Headings and lists inside a step body (numbered troubleshooting guides) */
+.step__body h3 {
+  font-family: var(--font-heading);
+  font-size: 17px; font-weight: 700; line-height: 1.3;
+  color: var(--color-primary); margin-bottom: 8px;
+}
+.step__body p { margin-bottom: 10px; }
+.step__body p:last-child { margin-bottom: 0; }
+.step__body ul { list-style: disc; padding-left: 20px; margin-top: 10px; }
+.step__body li { margin-bottom: 6px; }
 
 /* Popular brands grid */
 .brands { padding: 40px 0; background: var(--color-white); }
