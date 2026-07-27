@@ -154,6 +154,29 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .page-hero__phone:hover { color: var(--color-accent); }
 
+/* Split hero — content left, framed image right */
+.page-hero--split .page-hero__inner { text-align: left; }
+.page-hero__grid { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
+.page-hero--split .page-hero__title { max-width: none; margin-left: 0; margin-right: 0; }
+.page-hero--split .page-hero__lede { margin-left: 0; margin-right: 0; }
+.page-hero--split .page-hero__actions { justify-content: flex-start; }
+.page-hero__figure { position: relative; width: 100%; max-width: 420px; }
+.page-hero__figure::before {
+  content: ""; position: absolute; inset: 16px -16px -16px 16px;
+  border: 3px solid var(--color-accent); border-radius: var(--radius-lg);
+  z-index: 0; pointer-events: none;
+}
+.page-hero__figure img {
+  position: relative; z-index: 1; display: block; width: 100%; height: auto;
+  border-radius: var(--radius-lg);
+  border: 4px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+}
+@media (min-width: 900px) {
+  .page-hero__grid { grid-template-columns: 1.25fr 0.75fr; gap: 50px; }
+  .page-hero__figure { justify-self: end; }
+}
+
 /* ---------- 7. INTRO ---------- */
 .intro { padding: 40px 0; background: var(--color-white); }
 .intro__grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
@@ -1095,16 +1118,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 700;
   border-bottom: 1px solid var(--color-accent);
 }
-/* Headings and lists inside a step body (numbered troubleshooting guides) */
-.step__body h3 {
-  font-family: var(--font-heading);
-  font-size: 17px; font-weight: 700; line-height: 1.3;
-  color: var(--color-primary); margin-bottom: 8px;
-}
-.step__body p { margin-bottom: 10px; }
-.step__body p:last-child { margin-bottom: 0; }
-.step__body ul { list-style: disc; padding-left: 20px; margin-top: 10px; }
-.step__body li { margin-bottom: 6px; }
 
 /* Popular brands grid */
 .brands { padding: 40px 0; background: var(--color-white); }
