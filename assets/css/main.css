@@ -154,6 +154,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .page-hero__phone:hover { color: var(--color-accent); }
 
+/* Inline links inside the hero lede and CTA band — underline so they read as links */
+.page-hero__lede a {
+  color: var(--color-white); font-weight: 600;
+  text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px;
+  transition: color var(--transition-base);
+}
+.page-hero__lede a:hover { color: var(--color-accent); }
+.cta-band p a {
+  color: var(--color-white); font-weight: 700;
+  text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px;
+  transition: color var(--transition-base);
+}
+.cta-band p a:hover { color: var(--color-primary); }
+
 /* Split hero — content left, framed image right */
 .page-hero--split .page-hero__inner { text-align: left; }
 .page-hero__grid { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
@@ -441,6 +455,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .accordion-body { max-height: 0; overflow: hidden; padding: 0 22px; transition: max-height 0.3s ease, padding 0.3s ease; }
 .accordion-item.is-open .accordion-body { max-height: 400px; padding-bottom: 22px; }
 .accordion-body p { color: var(--color-text-muted); font-size: 14px; line-height: 1.7; }
+.accordion-body a { color: var(--color-accent-dark); font-weight: 600; border-bottom: 1px solid var(--color-accent); transition: color var(--transition-base); }
+.accordion-body a:hover { color: var(--color-primary); }
 
 .faq--with-image .faq__grid { display: grid; grid-template-columns: 1fr; gap: 30px; align-items: start; }
 .faq--with-image .faq__image {
