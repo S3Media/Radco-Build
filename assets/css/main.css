@@ -323,6 +323,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 22px; font-weight: 700; color: var(--color-primary);
 }
 .signs__cta p { margin-bottom: 18px; color: var(--color-text-muted); }
+.signs__cta p a { color: var(--color-accent-dark); font-weight: 600; border-bottom: 1px solid var(--color-accent); transition: color var(--transition-base); }
+.signs__cta p a:hover { color: var(--color-primary); }
 
 /* ---------- 9. WHY-CHOOSE (image variant + no-image modifier) ---------- */
 .why-choose { padding: 40px 0; background: var(--color-white); }
@@ -367,6 +369,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .why-point__text { color: var(--color-text-muted); font-size: 14px; line-height: 1.6; }
 .why-choose--no-image .why-choose__points-col .why-choose__points { display: grid; gap: 20px; }
+@media (min-width: 768px) {
+  .why-choose--no-image .why-choose__points-col .why-choose__points { grid-template-columns: 1fr 1fr; gap: 22px 30px; }
+}
 
 /* ---------- 10. REPAIR SERVICES ---------- */
 .repair-services { padding: 40px 0; background: var(--color-cream); }
@@ -1259,6 +1264,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: color var(--transition-base);
 }
 .checklist__item a:hover { color: var(--color-primary); }
+/* Four-across on desktop — single row for four short items */
+@media (min-width: 768px) { .checklist--4col { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .checklist--4col { grid-template-columns: repeat(4, 1fr); } }
+/* Two-across on desktop — wider boxes for title + description items */
+@media (min-width: 1024px) { .checklist--2col { grid-template-columns: repeat(2, 1fr); } }
 /* Feature variant — bold two-column green callout boxes with larger icons */
 .checklist--feature { grid-template-columns: 1fr; }
 .checklist--feature .checklist__item {
