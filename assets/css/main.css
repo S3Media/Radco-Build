@@ -421,6 +421,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .service-card__link::after { content: "→"; transition: transform var(--transition-base); }
 .service-card__link:hover { gap: 10px; border-bottom-color: var(--color-accent); }
 .service-card__link:hover::after { transform: translateX(3px); }
+/* Learn More rendered as a button, pinned to the bottom of an equal-height card */
+.service-card__btn { margin-top: auto; align-self: flex-start; }
 
 /* ---------- 12. FEATURE STRIP ---------- */
 .feature-strip {
