@@ -1094,6 +1094,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* Numbered instruction steps */
 .steps { padding: 40px 0; background: var(--color-cream); }
+.steps--white { background: var(--color-white); }
 .repair-services--alt { background: var(--color-cream); }
 .steps__list {
   display: grid;
@@ -1283,6 +1284,61 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (min-width: 1024px) { .checklist--4col { grid-template-columns: repeat(4, 1fr); } }
 /* Two-across on desktop — wider boxes for title + description items */
 @media (min-width: 1024px) { .checklist--2col { grid-template-columns: repeat(2, 1fr); } }
+/* Stacked variant — a plain single-column checklist that reads top-to-bottom, not boxes */
+.checklist--stack { grid-template-columns: 1fr; max-width: 860px; gap: 0; }
+@media (min-width: 768px) { .checklist--stack { grid-template-columns: 1fr; } }
+@media (min-width: 1024px) { .checklist--stack { grid-template-columns: 1fr; } }
+.checklist--stack .checklist__item {
+  background: transparent;
+  border-left: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid var(--color-border);
+  align-items: flex-start;
+  padding: 16px 6px;
+}
+.checklist--stack .checklist__item:last-child { border-bottom: none; }
+.checklist--stack .checklist__item:hover { transform: none; }
+/* White bordered container that wraps a stacked checklist */
+.checklist-box {
+  max-width: 940px;
+  margin: 30px auto 0;
+  padding: 14px 30px 26px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.checklist-box .checklist--stack { max-width: none; margin: 0; }
+/* Breathing room between the checklist box and the text that follows it */
+.checklist-box + .intro__content { margin-top: 36px; }
+/* Wider intro copy for a section-head that needs more line length */
+.section-head--wide p { max-width: 960px; }
+
+/* Inline CTA banner — a compact call-to-action bar placed within a section */
+.cta-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 40px auto 0;
+  padding: 26px 34px;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 34px rgba(8, 177, 42, 0.28);
+}
+.cta-inline__text {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(18px, 2.4vw, 23px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-white);
+}
+.cta-inline .btn { flex-shrink: 0; }
+
 /* Feature variant — bold two-column green callout boxes with larger icons */
 .checklist--feature { grid-template-columns: 1fr; }
 .checklist--feature .checklist__item {
@@ -1364,6 +1420,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--color-text);
   margin: 0;
 }
+.benefit-card__text a {
+  color: var(--color-accent-dark);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-accent);
+  transition: color var(--transition-base);
+}
+.benefit-card__text a:hover { color: var(--color-primary); }
+.benefit-card__price { display: block; margin-bottom: 8px; font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: var(--color-accent-dark); }
 /* Breathing room between the benefit cards and the text that follows them */
 .benefit-grid + .intro__content { margin-top: 40px; }
 
