@@ -285,6 +285,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .signs::before { left: 0; }
 .signs::after { right: 0; }
 .signs__grid { display: grid; grid-template-columns: 1fr; gap: 24px; position: relative; z-index: 2; }
+/* Breathing room between the sign-card grid and the text that follows it */
+.signs__grid + .intro__content { margin-top: 40px; }
 .sign-card {
   position: relative; padding: 30px 26px; background: var(--color-white);
   border-top: 4px solid var(--color-accent); border-radius: var(--radius-lg);
