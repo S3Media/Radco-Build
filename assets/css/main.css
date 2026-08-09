@@ -1379,6 +1379,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (min-width: 900px) {
   .benefit-grid { grid-template-columns: repeat(3, 1fr); }
 }
+/* Two-column variant — for four cards laid out 2x2 with no lonely trailing box */
+.benefit-grid--2col { max-width: 1120px; gap: 26px; }
+@media (min-width: 700px) {
+  .benefit-grid--2col { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .benefit-grid--2col { grid-template-columns: repeat(2, 1fr); }
+}
 .benefit-card {
   display: flex;
   flex-direction: column;
