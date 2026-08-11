@@ -1314,6 +1314,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .checklist-box + .intro__content { margin-top: 36px; }
 /* Wider intro copy for a section-head that needs more line length */
 .section-head--wide p { max-width: 960px; }
+/* Inline link inside a section heading — matches the heading text, no underline */
+.section-title a { color: inherit; border-bottom: none; text-decoration: none; transition: color var(--transition-base); }
+.section-title a:hover { color: var(--color-accent-dark); }
 
 /* Inline CTA banner — a compact call-to-action bar placed within a section */
 .cta-inline {
