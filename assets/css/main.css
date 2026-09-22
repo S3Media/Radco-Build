@@ -435,6 +435,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .service-card__link:hover::after { transform: translateX(3px); }
 /* Learn More rendered as a button, pinned to the bottom of an equal-height card */
 .service-card__btn { margin-top: auto; align-self: flex-start; }
+/* Actions row — a primary button plus an optional secondary link, pinned to the card bottom */
+.service-card__actions { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; padding-top: 6px; }
+.service-card__actions .service-card__link { margin-top: 0; }
 
 /* ---------- 12. FEATURE STRIP ---------- */
 .feature-strip {
@@ -814,6 +817,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-bottom: 1px solid var(--color-accent);
 }
 .service-area__cities li a:hover { color: var(--color-accent-dark); }
+/* Cream variant — keeps section alternation clean; cities panel goes white for contrast */
+.service-area--cream { background: var(--color-cream); }
+.service-area--cream .service-area__cities { background: var(--color-white); }
 
 /* About-page responsive additions */
 @media (min-width: 480px) {
