@@ -384,6 +384,25 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (min-width: 768px) {
   .why-choose--no-image .why-choose__points-col .why-choose__points { grid-template-columns: 1fr 1fr; gap: 22px 30px; }
 }
+/* Titled variant — heading spans full width above a content-left / image-right split */
+.why-choose--titled .section-head { margin-bottom: 40px; text-align: left; }
+.why-choose--titled .section-head p { margin-left: 0; }
+@media (min-width: 1024px) {
+  .why-choose--titled .why-choose__grid { grid-template-columns: 1.05fr 0.95fr; }
+}
+/* Framed image — a white-bordered photo with an offset green bracket to the top-right */
+.why-choose__image--framed { overflow: visible; background: transparent; box-shadow: none; }
+.why-choose__image--framed img {
+  z-index: 1; border-radius: var(--radius-lg);
+  border: 4px solid var(--color-white);
+  box-shadow: 0 22px 46px rgba(7, 47, 100, 0.25);
+}
+.why-choose__image--framed::after {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  inset: -18px -18px 18px 18px;
+  border: 3px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+}
 
 /* ---------- 10. REPAIR SERVICES ---------- */
 .repair-services { padding: 40px 0; background: var(--color-cream); }
@@ -607,6 +626,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-align: center;
   margin-top: 30px;
 }
+.inline-cta-center p { max-width: 720px; margin: 0 auto 24px; color: var(--color-text-muted); font-size: 15px; line-height: 1.7; }
 .inline-cta-center--lg {
   margin-top: 50px;
   padding: 20px 0 30px;
