@@ -475,6 +475,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ---------- 13. FAQ ACCORDION ---------- */
 .faq { padding: 40px 0; background: var(--color-white); }
+.faq--cream { background: var(--color-cream); }
 .faq__inner { max-width: 880px; margin: 0 auto; }
 .accordion-item {
   margin-bottom: 14px; background: var(--color-white);
@@ -1367,6 +1368,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--color-white);
 }
 .cta-inline .btn { flex-shrink: 0; }
+.cta-inline__sub { margin: 8px 0 0; max-width: 640px; color: var(--color-white); font-size: 14px; font-weight: 500; line-height: 1.55; opacity: 0.94; }
 
 /* Feature variant — bold two-column green callout boxes with larger icons */
 .checklist--feature { grid-template-columns: 1fr; }
