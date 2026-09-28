@@ -403,6 +403,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border: 3px solid var(--color-accent);
   border-radius: var(--radius-lg);
 }
+/* Portrait-oriented framed image */
+.why-choose__image--tall { aspect-ratio: 3 / 4; }
+/* Stretch the image column to match the height of the content column */
+.why-choose__grid--stretch { align-items: stretch; }
+.why-choose__grid--stretch .why-choose__image { aspect-ratio: auto; }
+.why-choose__grid--stretch .why-choose__image img { object-position: center 28%; }
 
 /* ---------- 10. REPAIR SERVICES ---------- */
 .repair-services { padding: 40px 0; background: var(--color-cream); }
