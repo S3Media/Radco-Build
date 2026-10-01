@@ -330,6 +330,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ---------- 9. WHY-CHOOSE (image variant + no-image modifier) ---------- */
 .why-choose { padding: 40px 0; background: var(--color-white); }
+.why-choose--cream { background: var(--color-cream); }
 .why-choose__grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
 .why-choose__image {
   position: relative; aspect-ratio: 4 / 3; background: var(--color-primary);
