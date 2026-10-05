@@ -464,6 +464,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Actions row — a primary button plus an optional secondary link, pinned to the card bottom */
 .service-card__actions { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; padding-top: 6px; }
 .service-card__actions .service-card__link { margin-top: 0; }
+/* Center the card action button(s) within each card */
+.service-grid--btn-center .service-card__actions { justify-content: center; text-align: center; }
 
 /* ---------- 12. FEATURE STRIP ---------- */
 .feature-strip {
