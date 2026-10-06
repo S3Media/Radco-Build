@@ -1541,8 +1541,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: relative; z-index: 1;
   background: transparent; border: none; box-shadow: none;
   gap: 30px; max-width: 1000px; padding: 6px 28px;
-  flex-wrap: wrap; justify-content: center; text-align: left;
+  flex-wrap: nowrap; justify-content: center; align-items: center; text-align: left;
 }
+.promo-banner__body { flex: 0 1 auto; min-width: 0; }
 .promo-banner__seal {
   width: 136px; height: auto; flex-shrink: 0;
   filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.45));
@@ -1552,13 +1553,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .promo-banner__stars { margin-bottom: 8px; color: #f5b301; font-size: 16px; letter-spacing: 4px; }
 .promo-banner--best h3 {
   margin: 0; color: var(--color-white);
-  font-family: var(--font-heading); font-size: clamp(23px, 3.2vw, 32px); font-weight: 800; line-height: 1.15;
+  font-family: var(--font-heading); font-size: clamp(25px, 3.6vw, 36px); font-weight: 800; line-height: 1.18;
 }
+.promo-banner--best h3 a { color: var(--color-white); font-size: 0.5em; font-weight: 700; border-bottom: 2px solid var(--color-accent); transition: color var(--transition-base); }
+.promo-banner--best h3 a:hover { color: var(--color-accent); }
 .promo-banner__sub { margin: 10px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 15px; font-weight: 500; line-height: 1.55; }
+.promo-banner__cat { margin: 7px 0 0; font-size: 24px; font-weight: 700; color: rgba(255, 255, 255, 0.92); }
+.promo-banner__cat a { color: var(--color-white); border-bottom: 2px solid var(--color-accent); transition: color var(--transition-base); }
+.promo-banner__cat a:hover { color: var(--color-accent); }
 .promo-banner__sub a { color: var(--color-white); font-weight: 700; border-bottom: 2px solid var(--color-accent); transition: color var(--transition-base); }
 .promo-banner__sub a:hover { color: var(--color-accent); }
 @media (max-width: 600px) {
-  .promo-banner--best .promo-banner__inner { text-align: center; }
+  .promo-banner--best .promo-banner__inner { flex-wrap: wrap; justify-content: center; text-align: center; }
   .promo-banner__seal { width: 120px; }
 }
 @media (prefers-reduced-motion: reduce) { .promo-banner__seal { animation: none; } }
