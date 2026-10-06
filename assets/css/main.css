@@ -1524,3 +1524,41 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: color var(--transition-base);
 }
 .promo-banner h3 a:hover { color: var(--color-accent-dark); }
+/* Best of Florida variant — blue band, white text, award seal */
+.promo-banner--best {
+  position: relative; overflow: hidden; padding: 46px 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 55%, var(--color-primary-darker) 100%);
+}
+.promo-banner--best::before {
+  content: ""; position: absolute; right: -90px; top: -110px; width: 400px; height: 400px; pointer-events: none;
+  background: radial-gradient(circle, rgba(8, 177, 42, 0.38) 0%, rgba(8, 177, 42, 0) 70%);
+}
+.promo-banner--best::after {
+  content: ""; position: absolute; left: -110px; bottom: -140px; width: 420px; height: 420px; pointer-events: none;
+  background: radial-gradient(circle, rgba(31, 111, 178, 0.45) 0%, rgba(31, 111, 178, 0) 70%);
+}
+.promo-banner--best .promo-banner__inner {
+  position: relative; z-index: 1;
+  background: transparent; border: none; box-shadow: none;
+  gap: 30px; max-width: 1000px; padding: 6px 28px;
+  flex-wrap: wrap; justify-content: center; text-align: left;
+}
+.promo-banner__seal {
+  width: 136px; height: auto; flex-shrink: 0;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.45));
+  animation: sealPulse 3.4s ease-in-out infinite;
+}
+@keyframes sealPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.045); } }
+.promo-banner__stars { margin-bottom: 8px; color: #f5b301; font-size: 16px; letter-spacing: 4px; }
+.promo-banner--best h3 {
+  margin: 0; color: var(--color-white);
+  font-family: var(--font-heading); font-size: clamp(23px, 3.2vw, 32px); font-weight: 800; line-height: 1.15;
+}
+.promo-banner__sub { margin: 10px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 15px; font-weight: 500; line-height: 1.55; }
+.promo-banner__sub a { color: var(--color-white); font-weight: 700; border-bottom: 2px solid var(--color-accent); transition: color var(--transition-base); }
+.promo-banner__sub a:hover { color: var(--color-accent); }
+@media (max-width: 600px) {
+  .promo-banner--best .promo-banner__inner { text-align: center; }
+  .promo-banner__seal { width: 120px; }
+}
+@media (prefers-reduced-motion: reduce) { .promo-banner__seal { animation: none; } }
