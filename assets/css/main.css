@@ -586,6 +586,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .signs__grid { grid-template-columns: repeat(2, 1fr); }
   .signs__cta { padding: 32px; }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-grid--3up { grid-template-columns: repeat(3, 1fr); }
   .feature-strip__grid { grid-template-columns: repeat(3, 1fr); }
   .site-footer__grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
 }
