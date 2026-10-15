@@ -359,6 +359,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-transform: uppercase; opacity: 0.9;
 }
 .why-choose__lede { margin-bottom: 22px; color: var(--color-text); font-size: 15px; line-height: 1.85; }
+/* Closing note under the why-choose checklist, before the CTA button */
+.why-choose__note { margin: 26px 0 0; color: var(--color-text); font-size: 15px; line-height: 1.85; }
 /* Space above the CTA button that closes the why-choose copy column */
 .why-choose__copy > p:last-child { margin-top: 28px; }
 /* Content links inside the why-choose copy match the accent-green + underline style */
